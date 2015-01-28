@@ -1,0 +1,33 @@
+{
+    "name": "stock viewer",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "getting stock info from naver",
+    "homepage_url": "http://heejune.me",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "js/jquery/jquery.min.js",
+            "js/common.js",
+            "src/bg/event.js"
+        ],
+        "persistent": true
+    },
+  "options_page": "src/options/index.html",
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "stock viewer",
+    "default_popup": "src/browser_action/popup.html"
+  },
+  "permissions": [
+    "alarms",
+    "storage",
+    "notifications",
+    "http://polling.finance.naver.com/*"
+  ]
+}
