@@ -1,9 +1,9 @@
 
 var event_module = (function () {
     
-    var interval = 1;
+    var interval = 1.0;
 
-    function createAlarm(interval) {
+    function createAlarm() {
         if (interval == 0) {
             chrome.alarms.clear("worker_myalarm");
             return;
@@ -19,7 +19,7 @@ var event_module = (function () {
             }
         });
 
-        chrome.alarms.create("worker_myalarm", { when: 5000, periodInMinutes: interval });
+        chrome.alarms.create("worker_myalarm", { delayInMinutes: 0.1, periodInMinutes: interval });
         
         console.log("worker_myalarm just created");
     }

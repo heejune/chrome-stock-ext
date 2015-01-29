@@ -16,7 +16,7 @@
             "js/common.js",
             "src/bg/event.js"
         ],
-        "persistent": true
+        "persistent": false
     },
   "options_page": "src/options/index.html",
   "browser_action": {
